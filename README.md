@@ -116,21 +116,3 @@ s"Hi $guestName, ..."
 safe"Hi $guestName, ..."
 // expected String, found Option[String]
 ```
-
-#### 
-##### 
-```scala
-```
-
-##### Solution
-```scala
-```
-
-#### 
-##### 
-```scala
-```
-
-##### Solution
-```scala
-```
