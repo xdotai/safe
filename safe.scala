@@ -19,12 +19,12 @@ object `package`{
   }
 
   implicit class SafeSeqContains[A, Repr](val coll: SeqLike[A, Repr]) extends AnyVal{
-    @inline def safeContains(t: A): Boolean = coll.contains(t)
+    @inline def safeContains[B](t: B)(implicit ev: A =:= B): Boolean = coll.contains(t)
   }
 
   // Set.contains is already type-safe, so this is only here for access to consistent names
   implicit class SafeSetContains[A, This <: scala.collection.SetLike[A,This] with scala.collection.Set[A]](val coll: SetLike[A, This]) extends AnyVal{
-    @inline def safeContains(t: A): Boolean = coll.contains(t)
+    @inline def safeContains[B <: A](t: B)(implicit ev: A =:= B): Boolean = coll.contains(t)
   }
 
   @implicitNotFound("""Could not automatically convert ${T} to String. Did you mean to convert? If yes, consider converting manually or implementing a SafeToString[${T}] type class instance or making ${T} extend trait SafeString.""")
