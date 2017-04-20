@@ -1,6 +1,6 @@
 package ai.x.safe
 package test
-import instances._
+import conversions._
 import shapeless.test.illTyped
 object Main{
   def main( args: Array[String] ): Unit = {
@@ -35,13 +35,10 @@ object Main{
     illTyped(
       """ !Set(1).safeContains("test") """
     )
+
     assert(
       Set(1).safeContains(1)
     )
-
-    illTyped("5: String")
-    assert(true)
-    println("Success")
 
     assert(
       "ab57" === ("a" ~ "b" ~ 5 ~ 7l)
@@ -64,7 +61,7 @@ object Main{
     )
 
     assert(
-      "5" === 5.safeString
+      "5" === 5.safeToString
     )
 
     assert(
