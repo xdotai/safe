@@ -13,9 +13,9 @@ package object conversions{
      safeToString.safeToString(value)
 }
 object `package`{
-  implicit class SafeEquals[T](val l: T) extends AnyVal{
-    @inline def ===(r: T): Boolean = l == r
-    @inline def !==(r: T): Boolean = l != r
+  implicit class SafeEquals[L](val l: L) extends AnyVal{
+    @inline def ===[R](r: R)(implicit ev: L =:= R): Boolean = l == r
+    @inline def !==[R](r: R)(implicit ev: L =:= R): Boolean = l != r
   }
 
   implicit class SafeSeqContains[A, Repr](val coll: SeqLike[A, Repr]) extends AnyVal{
@@ -32,7 +32,7 @@ object `package`{
     @inline def safeToString(value: T): String
   }
   trait SafeString{
-    def safeToString: String 
+    def safeToString: String
   }
   object SafeToString{
     @inline def apply[T:SafeToString]: SafeToString[T] = implicitly[SafeToString[T]]

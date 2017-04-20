@@ -8,6 +8,7 @@ object Main{
     foo("test")
 
     illTyped(""" 1 === "test" """)
+    illTyped(""" (1: Any) === "test" """)
     assert(1 === 1)
     assert(1 !== 2)
 
