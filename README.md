@@ -1,6 +1,6 @@
-## diff
+## safe
 
-[![Join the chat at https://gitter.im/xdotai/diff](https://badges.gitter.im/xdotai/safe.svg)](https://gitter.im/xdotai/safe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/xdotai/safe](https://badges.gitter.im/xdotai/safe.svg)](https://gitter.im/xdotai/safe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Helpers to write type-safe Scala code using equality and Strings.
 
@@ -11,13 +11,13 @@ Helpers to write type-safe Scala code using equality and Strings.
 #### SBT
 
 ```scala
-"ai.x" %% "diff" % "1.2.0"
+"ai.x" %% "safe" % "1.2.0"
 ```
 
 #### CBT
 
 ```scala
-ScalaDependency( "ai.x", "diff", "1.2.0" )
+ScalaDependency( "ai.x", "safe", "1.2.0" )
 ```
 
 ### imports
