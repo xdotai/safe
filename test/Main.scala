@@ -40,6 +40,15 @@ object Main{
       Set(1).safeContains(1)
     )
 
+    illTyped(
+      """ Option(1).safeContains("test") """
+    )
+
+    assert(
+      Option(1).safeContains(1)
+    )
+
+
     assert(
       "ab57" === ("a" ~ "b" ~ 5 ~ 7l)
     )
