@@ -75,5 +75,7 @@ object Main{
     assert(
       "abc" === safe"a${"b"}c"
     )
+
+    println("success!")
   }
 }
