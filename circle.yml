@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - cd..; git clone https://github.com/cvogt/cbt.git; cd safe
+    - cd ..; git clone https://github.com/cvogt/cbt.git; cd safe
     - ln -s ../cbt/cbt ~/bin/cbt
   override:
     - cbt test.cross.compile
