@@ -9,7 +9,8 @@ class TestBuild(val context: Context) extends Shared{
     super.dependencies ++ // don't forget super.dependencies here for scala-library, etc.
     Seq( new Build(context) ) ++
     Resolver( mavenCentral, sonatypeReleases ).bind(
-       "com.chuusai" %% "shapeless" % "2.3.2"
+      //"ai.x" %% "safe" % "0.1.0",
+      "com.chuusai" %% "shapeless" % "2.3.2"
     )
 }
 

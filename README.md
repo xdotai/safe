@@ -8,16 +8,18 @@ Helpers to write type-safe Scala code using equality and Strings.
 
 ### Build setup
 
+cross-published for Scala 2.10.x, 2.11.x, 2.12.x
+
 #### SBT
 
 ```scala
-"ai.x" %% "diff" % "1.2.0"
+"ai.x" %% "diff" % "0.1.0"
 ```
 
 #### CBT
 
 ```scala
-ScalaDependency( "ai.x", "diff", "1.2.0" )
+ScalaDependency( "ai.x", "diff", "0.1.0" )
 ```
 
 ### imports
