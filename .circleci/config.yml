@@ -11,6 +11,7 @@ jobs:
             cd ..
             git clone https://github.com/cvogt/cbt.git
             cd safe
+            mkdir ~/bin
             ln -s ../cbt/cbt ~/bin/cbt
       - run:
           command: 'cbt test.cross.run'
