@@ -32,7 +32,7 @@ object `package`{
     @inline def safeToString(value: T): String
   }
   trait SafeString{
-    def safeToString: String 
+    def safeToString: String
   }
   object SafeToString{
     @inline def apply[T:SafeToString]: SafeToString[T] = implicitly[SafeToString[T]]
