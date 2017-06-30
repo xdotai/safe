@@ -1,4 +1,4 @@
-## diff
+## safe
 
 [![Join the chat at https://gitter.im/xdotai/diff](https://badges.gitter.im/xdotai/safe.svg)](https://gitter.im/xdotai/safe?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -13,13 +13,13 @@ cross-published for Scala 2.10.x, 2.11.x, 2.12.x
 #### SBT
 
 ```scala
-"ai.x" %% "diff" % "0.1.0"
+"ai.x" %% "safe" % "0.1.0"
 ```
 
 #### CBT
 
 ```scala
-ScalaDependency( "ai.x", "diff", "0.1.0" )
+ScalaDependency( "ai.x", "safe", "0.1.0" )
 ```
 
 ### imports
