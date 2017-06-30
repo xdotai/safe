@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/safe
+    docker:
+      - image: circleci/openjdk:8-jdk
+    steps:
+      - checkout
+      - run:
+          command: |
+            cd ..
+            git clone https://github.com/cvogt/cbt.git
+            cd safe
+            ln -s ../cbt/cbt ~/bin/cbt
+      - run:
+          command: 'cbt test.cross.run'
