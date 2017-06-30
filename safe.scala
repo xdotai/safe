@@ -27,6 +27,10 @@ object `package`{
     @inline def safeContains(t: A): Boolean = coll.contains(t)
   }
 
+  implicit class SafeOptionContains[A](val opt: Option[A]) extends AnyVal{
+    @inline def safeContains(t: A): Boolean = opt.contains(t)
+  }
+
   @implicitNotFound("""Could not automatically convert ${T} to String. Did you mean to convert? If yes, consider converting manually or implementing a SafeToString[${T}] type class instance or making ${T} extend trait SafeString.""")
   trait SafeToString[T]{
     @inline def safeToString(value: T): String
