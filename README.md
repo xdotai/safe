@@ -106,7 +106,7 @@ guests.safeContains( chrisId )
 // safeMkString is not a member of List[Option[String]]
 ```
 
-#### s"..." is not type-safe
+#### String Interpolation is not type-safe
 ##### Problem
 ```scala
 s"Hi $guestName, ..."
